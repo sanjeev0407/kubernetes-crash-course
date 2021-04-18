@@ -1,0 +1,17 @@
+version = 1
+
+test_patterns = [
+    "test/**",
+    "integration_tests/test_*.py",
+    "**/*_test.go"
+]
+
+exclude_patterns = ["migrations/**"]
+
+[[analyzers]]
+name = "go"
+enabled = true
+
+  [analyzers.meta]
+  import_paths = ["github.com/sanjeev0407/kubernetes-crash-course"]
+  dependencies_vendored = true
